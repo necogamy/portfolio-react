@@ -1,0 +1,22 @@
+main {
+    height: 85%;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.social-ico {
+    width: 5vh;
+    transition: 1s;
+}
+
+aside {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+aside > section a {
+    padding-right: 2vw;
+}

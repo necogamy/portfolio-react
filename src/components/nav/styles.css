@@ -1,0 +1,11 @@
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+nav section {
+    display: flex;
+    justify-content: space-between;
+    width: 350px;
+    margin-right: 8%;
+}
