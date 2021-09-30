@@ -4,17 +4,19 @@ import './app.css';
 import { Nav } from '../nav/Nav';
 import { Background } from '../background/Background';
 import { Switch as SwitchButton } from '../switch/Switch';
-import { About } from '../views/About';
-import { Home } from '../views/Home';
-import { Projects } from '../views/Projects';
-import { Skills } from '../views/Skills';
+import { About } from '../views/about/About';
+import { Home } from '../views/home/Home';
+import { Projects } from '../views/projects/Projects';
+import { Skills } from '../views/skills/Skills';
 
 import gmailIco from '../../assets/icons/gmail.svg';
 import githubIco from '../../assets/icons/github.svg';
 import linkedinIco from '../../assets/icons/linkedin.svg';
 
+import 'animate.css';
 
-function App() {
+
+const App = () => {
   const [ mode, setMode ] = useState('night');
 
   const changeMode = () => {
@@ -30,25 +32,25 @@ function App() {
         <Nav mode={mode} />
         <Switch>
           <Route path='/skills'>
-            <Skills />
+            <Skills mode={mode} />
           </Route>
           <Route path='/projects'>
-            <Projects />
+            <Projects mode={mode} />
           </Route>
           <Route path='/about'>
-            <About />
+            <About mode={mode} />
           </Route>
           <Route path='/'>
-            <Home />
+            <Home mode={mode} />
           </Route>
         </Switch>
         <aside>
-            <section aria-label="contact info">
+            <section className='animate__animated animate__fadeInLeft' aria-label="contact info">
                 <a href="https://www.linkedin.com/in/nicogamy" target="_blank" rel='noreferrer'><img style={imageFilter} className='social-ico' src={linkedinIco} alt="linkedin" /></a>
                 <a href="https://github.com/necogamy" target="_blank" rel='noreferrer'><img style={imageFilter} className='social-ico' src={githubIco} alt="github" /></a>
                 <a href="mailto:madrazonecogamy@gmail.com" rel='noreferrer'><img style={imageFilter} className='social-ico' src={gmailIco} alt="gmail" /></a>
             </section>
-            <SwitchButton changeMode={changeMode} />
+            <SwitchButton mode={mode} changeMode={changeMode} />
         </aside>
     </main>
     </Fragment>

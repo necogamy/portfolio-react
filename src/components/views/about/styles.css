@@ -1,0 +1,11 @@
+section > ul {
+    display: flex;
+    padding-top: 1.2rem;
+}
+
+section > ul > li {
+    list-style-type: none;
+    padding: 3rem 1.5rem;
+    margin-right: 2rem;
+    border-radius: 50%;
+}

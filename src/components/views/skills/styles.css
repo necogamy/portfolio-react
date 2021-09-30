@@ -1,0 +1,21 @@
+.skills {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.skills section:nth-child(1) {
+    flex: 1;
+}
+
+.skills div {
+    display: block;
+    padding: 3px 0 3px 13px;
+    border-radius: 6px;
+    margin-top: 9px;
+    transition: all 1s ease-in-out;
+    width: 0;
+}
+
+.skills article {
+    margin-top: 20px;
+}

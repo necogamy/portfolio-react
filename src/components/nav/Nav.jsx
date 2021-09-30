@@ -8,16 +8,17 @@ export function Nav(props) {
         color: props.mode === 'night' ? 'azure' : '#1c1c1c',
         transition: '1s',
         textDecoration: 'none',
-        fontSize: '1.3rem'
+        fontSize: '1.3rem',
+        fontWeight: 'bold'
     }
 
     return (
         <nav>
-            <Link style={linkStyles} to='/'>Home</Link>
+            <Link className='animate__animated animate__fadeInDown' style={linkStyles} to='/'>Home</Link>
             <section role="navigation" aria-label="Navigation bar">
-              <Link style={linkStyles} to='/about'>About me</Link>
-              <Link style={linkStyles} to='/projects'>Projects</Link>
-              <Link style={linkStyles} to='/skills'>Skills</Link>
+              <Link className='animate__animated animate__fadeInDown' style={linkStyles} to='/about'>About me</Link>
+              <Link className='animate__animated animate__fadeInDown' style={linkStyles} to='/projects'>Projects</Link>
+              <Link className='animate__animated animate__fadeInDown' style={linkStyles} to='/skills'>Skills</Link>
             </section>
         </nav>
     );
